@@ -1,0 +1,7 @@
+st.image('assets/images/heart_image.jpg', caption='Understanding Heart Disease', use_column_width=True)
+You can also embed videos:
+st.video("https://www.youtube.com/watch?v=example", start_time=30)
+
+
+pip install chatterbot
+pip install chatterbot_corpus

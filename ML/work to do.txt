@@ -1,0 +1,39 @@
+st.image('assets/images/heart_image.jpg', caption='Understanding Heart Disease', use_column_width=True)
+You can also embed videos:
+st.video("https://www.youtube.com/watch?v=example", start_time=30)
+
+
+pip install chatterbot
+pip install chatterbot_corpus
+
+1. User Profile Management (Optional)
+Allow users to create profiles and store their prediction history. This could involve:
+
+User Authentication: Adding basic authentication with usernames and passwords.
+Profile Page: Let users see past predictions, update their information, and track their health status.
+Database Integration: Storing user profiles and prediction results in a database (SQLite, MongoDB, etc.).
+This would require setting up a user management system (using Streamlit’s built-in support for session state or integrating with a more robust backend).
+
+
+
+????yaha pe ek optional massage like if danger or positive consult doctor if condition me 
+video wagere hospital ka contact waigere ka link dedenge
+
+def health_risk_assessment(age, bmi, blood_pressure):
+    # Basic risk assessment logic
+    risk_score = 0
+    if age > 60:
+        risk_score += 2
+    if bmi > 30:
+        risk_score += 3
+    if blood_pressure > 140:
+        risk_score += 2
+        
+    if risk_score > 5:
+        return "High Risk: Please consult a doctor immediately."
+    elif risk_score > 2:
+        return "Medium Risk: Consider lifestyle changes."
+    else:
+        return "Low Risk: Maintain a healthy lifestyle."
+
+st.write(health_risk_assessment(65, 32, 150))
